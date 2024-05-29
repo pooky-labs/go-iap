@@ -1,6 +1,6 @@
 package api
 
-import "github.com/awa/go-iap/appstore"
+import "github.com/mihalydanis/go-iap/appstore"
 
 // OrderLookupResponse https://developer.apple.com/documentation/appstoreserverapi/orderlookupresponse
 type OrderLookupResponse struct {

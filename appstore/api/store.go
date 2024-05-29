@@ -1,4 +1,4 @@
-//go:generate mockgen -destination=../mocks/store.go -package=mocks github.com/awa/go-iap/appstore/api StoreAPIClient
+//go:generate mockgen -destination=../mocks/store.go -package=mocks github.com/mihalydanis/go-iap/appstore/api StoreAPIClient
 
 package api
 
