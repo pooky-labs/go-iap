@@ -145,6 +145,22 @@ func TestVerifySubscriptionV2(t *testing.T) {
 	// TODO Normal scenario
 }
 
+func TestGetProduct_Error(t *testing.T) {
+	t.Parallel()
+	// Exception scenario
+	expected := "googleapi: Error 400: Invalid package name: package., badRequest"
+
+	client, _ := New(jsonKey)
+	ctx := context.Background()
+	_, err := client.GetProduct(ctx, "package", "skuID")
+
+	if err == nil || err.Error() != expected {
+		t.Errorf("got %v", err)
+	}
+
+	// TODO Normal scenario
+}
+
 func TestVerifyProduct(t *testing.T) {
 	t.Parallel()
 	// Exception scenario

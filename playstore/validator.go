@@ -22,6 +22,7 @@ import (
 
 // The IABProduct type is an interface for product service
 type IABProduct interface {
+	GetProduct(context.Context, string, string) (*androidpublisher.InAppProduct, error)
 	VerifyProduct(context.Context, string, string, string) (*androidpublisher.ProductPurchase, error)
 	AcknowledgeProduct(context.Context, string, string, string, string) error
 	ConsumeProduct(context.Context, string, string, string) error
@@ -164,6 +165,18 @@ func (c *Client) RevokeSubscriptionV2(
 ) (*androidpublisher.RevokeSubscriptionPurchaseResponse, error) {
 	ps := androidpublisher.NewPurchasesSubscriptionsv2Service(c.service)
 	result, err := ps.Revoke(packageName, token, req).Context(ctx).Do()
+
+	return result, err
+}
+
+// GetProduct gets product
+func (c *Client) GetProduct(
+	ctx context.Context,
+	packageName string,
+	skuID string,
+) (*androidpublisher.InAppProduct, error) {
+	ps := androidpublisher.NewInappproductsService(c.service)
+	result, err := ps.Get(packageName, skuID).Context(ctx).Do()
 
 	return result, err
 }
