@@ -1,4 +1,4 @@
-module github.com/mihalydanis/go-iap
+module github.com/pooky-labs/go-iap
 
 go 1.20
 

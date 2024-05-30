@@ -2,25 +2,25 @@ go-iap
 ======
 
 ![](https://img.shields.io/badge/golang-1.20+-blue.svg?style=flat)
-[![unit test](https://github.com/mihalydanis/go-iap/actions/workflows/unit_test.yml/badge.svg)](https://github.com/mihalydanis/go-iap/actions/workflows/unit_test.yml)
+[![unit test](https://github.com/pooky-labs/go-iap/actions/workflows/unit_test.yml/badge.svg)](https://github.com/pooky-labs/go-iap/actions/workflows/unit_test.yml)
 
 >go-iap verifies the purchase receipt via AppStore, GooglePlayStore or Amazon AppStore.
 
 Current API Documents:
 
-* AppStore: [![GoDoc](https://godoc.org/github.com/mihalydanis/go-iap/appstore?status.svg)](https://godoc.org/github.com/mihalydanis/go-iap/appstore)
-* AppStore Server API: [![GoDoc](https://godoc.org/github.com/mihalydanis/go-iap/appstore?status.svg)](https://godoc.org/github.com/mihalydanis/go-iap/appstore/api)
-* GooglePlay: [![GoDoc](https://godoc.org/github.com/mihalydanis/go-iap/playstore?status.svg)](https://godoc.org/github.com/mihalydanis/go-iap/playstore)
-* Amazon AppStore: [![GoDoc](https://godoc.org/github.com/mihalydanis/go-iap/amazon?status.svg)](https://godoc.org/github.com/mihalydanis/go-iap/amazon)
-* Huawei HMS: [![GoDoc](https://godoc.org/github.com/mihalydanis/go-iap/hms?status.svg)](https://godoc.org/github.com/mihalydanis/go-iap/hms)
+* AppStore: [![GoDoc](https://godoc.org/github.com/pooky-labs/go-iap/appstore?status.svg)](https://godoc.org/github.com/pooky-labs/go-iap/appstore)
+* AppStore Server API: [![GoDoc](https://godoc.org/github.com/pooky-labs/go-iap/appstore?status.svg)](https://godoc.org/github.com/pooky-labs/go-iap/appstore/api)
+* GooglePlay: [![GoDoc](https://godoc.org/github.com/pooky-labs/go-iap/playstore?status.svg)](https://godoc.org/github.com/pooky-labs/go-iap/playstore)
+* Amazon AppStore: [![GoDoc](https://godoc.org/github.com/pooky-labs/go-iap/amazon?status.svg)](https://godoc.org/github.com/pooky-labs/go-iap/amazon)
+* Huawei HMS: [![GoDoc](https://godoc.org/github.com/pooky-labs/go-iap/hms?status.svg)](https://godoc.org/github.com/pooky-labs/go-iap/hms)
 
 
 # Installation
 ```
-go get github.com/mihalydanis/go-iap/appstore
-go get github.com/mihalydanis/go-iap/playstore
-go get github.com/mihalydanis/go-iap/amazon
-go get github.com/mihalydanis/go-iap/hms
+go get github.com/pooky-labs/go-iap/appstore
+go get github.com/pooky-labs/go-iap/playstore
+go get github.com/pooky-labs/go-iap/amazon
+go get github.com/pooky-labs/go-iap/hms
 ```
 
 
@@ -30,7 +30,7 @@ go get github.com/mihalydanis/go-iap/hms
 
 ```go
 import(
-    "github.com/mihalydanis/go-iap/appstore"
+    "github.com/pooky-labs/go-iap/appstore"
 )
 
 func main() {
@@ -50,7 +50,7 @@ func main() {
 
 ```go
 import(
-    "github.com/mihalydanis/go-iap/playstore"
+    "github.com/pooky-labs/go-iap/playstore"
 )
 
 func main() {
@@ -71,7 +71,7 @@ func main() {
 
 ```go
 import(
-    "github.com/mihalydanis/go-iap/amazon"
+    "github.com/pooky-labs/go-iap/amazon"
 )
 
 func main() {
@@ -86,7 +86,7 @@ func main() {
 
 ```go
 import(
-    "github.com/mihalydanis/go-iap/hms"
+    "github.com/pooky-labs/go-iap/hms"
 )
 
 func main() {
@@ -114,7 +114,7 @@ func main() {
 
 ```go
 import(
-	"github.com/mihalydanis/go-iap/appstore/api"
+	"github.com/pooky-labs/go-iap/appstore/api"
 )
 
 //  For generate key file and download it, please refer to https://developer.apple.com/documentation/appstoreserverapi/creating_api_keys_to_use_with_the_app_store_server_api
@@ -151,7 +151,7 @@ func main() {
 
 ```go
 import(
-	"github.com/mihalydanis/go-iap/appstore/api"
+	"github.com/pooky-labs/go-iap/appstore/api"
 )
 
 //  For generate key file and download it, please refer to https://developer.apple.com/documentation/appstoreserverapi/creating_api_keys_to_use_with_the_app_store_server_api
@@ -190,7 +190,7 @@ func main() {
 
 ```go
 import (
-	"github.com/mihalydanis/go-iap/appstore"
+	"github.com/pooky-labs/go-iap/appstore"
 	"github.com/golang-jwt/jwt/v4"
 )
 
