@@ -82,6 +82,21 @@ func (mr *MockIABProductMockRecorder) VerifyProduct(arg0, arg1, arg2, arg3 any) 
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "VerifyProduct", reflect.TypeOf((*MockIABProduct)(nil).VerifyProduct), arg0, arg1, arg2, arg3)
 }
 
+// GetProduct mocks base method.
+func (m *MockIABProduct) GetProduct(arg0 context.Context, arg1, arg2 string) (*androidpublisher.InAppProduct, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "GetProduct", arg0, arg1, arg2)
+	ret0, _ := ret[0].(*androidpublisher.InAppProduct)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// GetProduct indicates an expected call of GetProduct.
+func (mr *MockIABProductMockRecorder) GetProduct(arg0, arg1, arg2 any) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "GetProduct", reflect.TypeOf((*MockIABProduct)(nil).GetProduct), arg0, arg1, arg2)
+}
+
 // MockIABSubscription is a mock of IABSubscription interface.
 type MockIABSubscription struct {
 	ctrl     *gomock.Controller
